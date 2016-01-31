@@ -1,1 +1,27 @@
 /* style main*/
+ a {text-decoration: none;}
+@font-face {
+    font-family: 'beb'; /*a name to be used later*/
+    src: url('BebasNeue.otf') format('opentype'); /*URL to font*/
+}
+@font-face {
+    font-family: 'opensans'; /*a name to be used later*/
+    src: url('OpenSans-Regular.ttf') format('truetype');/*URL to font*/
+}
+
+.info {
+    font-family: 'opensans';
+    font-size: 16px;
+}
+
+.info input{
+    font-family: 'Ariel';
+}
+
+.info textarea{
+    font-family: 'Ariel';
+}
+
+.inline{
+    display:flex;
+}

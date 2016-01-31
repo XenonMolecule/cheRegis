@@ -2,67 +2,82 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> </title>
+        <title>Register for CHEHacks</title>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+       
     </head>
-    <body>
-        <div class="info">
-            <!--First Name, Last Name, Email, Phone Number, 
+    <!--First Name, Last Name, Email, Phone Number, 
             optional Gender, Zip Code, School, Graduation Year (Grade), 
             Diet Restriction, t-shirt size, firstHackathon Or not, 
             workshops they want, date of submission, unique key 
             reason for attending, optional resume upload  (13 questions) --> 
-            <label for="first"><font color="red">*</font>First Name : </label>
-            <input id="first" type="text"> 
-            <br>
-            <label for = "last"><font color="red">*</font>Last Name : </label>
-            <input id = "last" type="text">
-            <br>
-            <label for = "email"><font color="red">*</font>Email : </label>
-            <input id = "email" type="email">
-            <br>
-            <label for= "number"><font color="red">*</font>Phone Number: </label>
-            <input id ="number" type="text">
-            <br>
-            <label for = "zip"><font color="red">*</font>Zip Code : </label>
-            <input id ="zip" type="text">
-            <br>
-            <label for = "school"><font color="red">*</font>School : </label>
-            <input id ="school" type="text">
-            <br>
-            <label for = "gradYear"><font color="red">*</font>Grade</label> <!--dropdown -->
-            <input id ="gradYear" type="text">
-            <br>
-            <label for = "dietRestrict"> <font color="red">*</font>Dietary Restrictions : </label>
-            <input id ="dietRestrict" type="text">
-            <br>
-            <label for = "teeSize"><font color="red">*</font>T-Shirt Size:</label>
-            <select id="teeSize">
-                <option value="small">Small</option>
-                <option value="medium">Medium</option>
-                <option value="large">Large</option>
-                <option value="extraLarge">Extra Large</option>
-            </select>
-            <br>
-            <label for = "Gender"><font color="red">*</font>Gender:</label>
-            <select id="Gender">
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-                <option value="Other">Other</option>
-            </select>
-            <br>
-            <label for = "firstHackathon">First Hackathon?</label>
-            <input id = "firstHackathon" type="checkbox">
-            <br>
-            <label for="workshops">Workshops you are interested in : </label>
-            <input id = "workshops">
-            <br>
-            <label for = "reasonToCome"> Reason for coming:</label><br>
-            <textarea rows="4" cols="50" id="reasonToCome"></textarea>
-            <br>
-            <label for="optionalResume">Resume:</label>
-            <input id = optionalResume>
-            <font color="red">*Required</font>
+    <body>
+        <div class="info">
+            <form class="form-horizontal">
+                <div class="form-group inline">
+                    <label for="first" class="col-sm-2 control-label"><font color="red">&nbsp*</font>First Name : </label>
+                    <div class="col-sm-10">
+                        <input id="first" type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group inline">
+                    <label for = "last" class="col-sm-2 control-label"><font color="red">&nbsp*</font>Last Name : </label>
+                    <div class="col-sm-10">
+                        <input id = "last" class="form-control" type="text">
+                    </div>
+                </div>
+                <br>
+                <label for = "email"><font color="red">&nbsp*</font>Email : </label>
+                <input id = "email" type="email">
+                <br>
+                <label for= "number"><font color="red">&nbsp*</font>Phone Number: </label>
+                <input id ="number" type="text">
+                <br>
+                <label for = "zip"><font color="red">&nbsp*</font>Zip Code : </label>
+                <input id ="zip" type="text">
+                <br>
+                <label for = "school"><font color="red">&nbsp*</font>School : </label>
+                <input id ="school" type="text">
+                <br>
+                <label for = "gradYear"><font color="red">&nbsp*</font>Grade :</label> <!--dropdown -->
+                <input id ="gradYear" type="text">
+                <br>
+                <label for = "dietRestrict"> <font color="red">&nbsp*</font>Dietary Restrictions : </label>
+                <input id ="dietRestrict" type="text">
+                <br>
+                <label for = "teeSize"><font color="red">&nbsp*</font>T-Shirt Size:</label>
+                <select id="teeSize">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                    <option value="extraLarge">Extra Large</option>
+                </select>
+                <br>
+                <label for = "Gender"><font color="red">&nbsp*</font>Gender:</label>
+                <select id="Gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+                <br>
+                <label for = "firstHackathon">&nbspFirst Hackathon?</label>
+                <input id = "firstHackathon" type="checkbox">
+                <br>
+                <label for="optionalResume">&nbspResume:</label>
+                <input id = "optionalResume" type = file>
+                <br>
+                <label for="workshops">&nbspWorkshops you are interested in : </label> <br>
+                <textarea rows="4" cols="50" id="workshops"></textarea>
+                <br>
+                <label for = "reasonToCome">&nbspReason for coming:</label><br>
+                <textarea rows="4" cols="50" id="reasonToCome"></textarea>
+                <br>
+                <font color="red">&nbsp*Required</font>
+            </form>
         </div>
-        
+        <script type="text/javascript" src="app.js"></script>    
     </body>
 </html>
