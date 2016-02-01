@@ -6,11 +6,10 @@
 }
 @font-face {
     font-family: 'opensans'; /*a name to be used later*/
-    src: url('OpenSans-Semibold.ttf') format('truetype');/*URL to font*/
+    src: url('OpenSans-Regular.ttf') format('truetype');/*URL to font*/
 }
 body{
    /* background-image: url("back.png");*/
-   background-color: "white";
 }
 .info {
     font-family: 'opensans';
