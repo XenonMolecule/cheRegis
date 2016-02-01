@@ -33,3 +33,7 @@ body{
     font-family:'beb';
     font-size:50px;
 }
+
+.unselected{
+    border-color:rgba(255,0,0,0.7);
+}

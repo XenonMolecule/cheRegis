@@ -3,10 +3,7 @@
 <html>
     <head>
         <title>Register for CHEHacks</title>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-        <link rel="stylesheet" type="text/css" href="style.1.css">
-        <script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        
        
     </head>
     <!--First Name, Last Name, Email, Phone Number, 
@@ -38,8 +35,9 @@
                     <label for = "dietRestrict"> <font color="red">&nbsp*</font>Dietary Restrictions : </label>
                     <br>&nbsp<input id ="dietRestrict" type="text" placeholder="Peanut Free, Vegetarian">
                     <br>
-                    <label for = "gradYear"><font color="red">&nbsp*</font>Grade :</label> <!--dropdown -->
-                    <select id="gradYear">
+                    <label for = "grade"><font color="red">&nbsp*</font>Grade :</label> <!--dropdown -->
+                    <select id="grade">
+                        <option value="select">Select</option>
                         <option value="fresh">Freshman</option>
                         <option value="soph">Sophmore</option>
                         <option value="jun">Junior</option>
@@ -55,33 +53,36 @@
                         <option value="extraLarge">Extra Large</option>
                     </select>
                     <br>
-                    <label for = "Gender"><font color="red">&nbsp*</font>Gender:</label>
-                    <select id="Gender">
+                    <label for = "firstHackathon"><font color="red">&nbsp*</font>First Hackathon?</label>
+                    <select id="firstHackathon">
                         <option value="select">Select</option>
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                        <option value="Other">Other</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
                     </select>
                     <br>
-                    <label for = "firstHackathon">&nbspFirst Hackathon?</label>
-                    <input id = "firstHackathon" type="checkbox">
-                    <br>
-                    <label for="optionalResume">&nbspResume:</label>
-                    &nbsp<input id = "optionalResume" type = file>
+                    <label for = "Gender">&nbspGender:</label>
+                    <br>&nbsp&nbsp<input id = "email" type="text">
                     <br>
                     <label for="workshops">&nbspWorkshops you are interested in : </label> <br>
                     &nbsp <textarea rows="4" cols="50" id="workshops"></textarea>
                     <br>
                     <label for = "reasonToCome">&nbspReason for coming:</label><br>
                     &nbsp <textarea rows="4" cols="50" id="reasonToCome"></textarea>
+                    <br> 
+                    <label for="optionalResume">&nbspResume:</label>
+                    <input id = "optionalResume" type = file>
                     <br>
-                    <font color="red">&nbsp*Required</font>
-            </form>
-            <br>
-            &nbsp&nbsp<button onClick = "submit()">Submit</button>
-            <br>
-            <br>
+                     &nbsp&nbsp<button id="submit">Submit</button>
+                    <br>
+                   <h3 id="required"><font color="red">&nbsp*Required</font></h3>
+                   
+                    
         </div>
+        <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="style.1.css">
+        <script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <script type="text/javascript" src="app.js"></script>    
     </body>
 </html>
