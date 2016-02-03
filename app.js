@@ -12,14 +12,7 @@ function uploadFile() {
 }
 
 $("#submit").on("click",function(){
-    if(check()){
-        updateFirebase();
-    } else {
-        $("#required").after(inputEmpty);
-        $('html, body').animate({
-            scrollTop: $("#warning").offset().top
-        }, 1000);
-    }
+    updateFirebase();
 });
 
 //check if all the required info is supplied
@@ -67,20 +60,41 @@ function checkSelection(id){
 
 //send answers to firebase
 function updateFirebase(){
-    console.log("sending to firebase...");
-    var firstName = $("#first").val();
-    var lastName = $("#last").val();
-    var email =  $("#email").val();
-    var number = $("#number").val();
-    var zip = $("#zip").val();
-    var school = $("#school").val();
-    var dietRestrict = $("#dietRestrict").val();
-    var grade = $("#grade").val();
-    var teeSize = $("#teeSize").val();
-    var firstHackathon = $("#firstHackathon").val();
-    var gender = $("#gender").val();
-    var workshops = $("#workshops").val();
-    var reasonToCome = $("#reasonToCome");
-    var name = (firstName+" "+lastName);
-    
+    if(check()){
+        console.log("sending to firebase...");
+        var firstName = $("#first").val();
+        var lastName = $("#last").val();
+        var email =  $("#email").val();
+        var number = $("#number").val();
+        var zip = $("#zip").val();
+        var school = $("#school").val();
+        var dietRestrict = $("#dietRestrict").val();
+        var grade = $("#grade").val();
+        var teeSize = $("#teeSize").val();
+        var firstHackathon = $("#firstHackathon").val();
+        var gender = $("#gender").val();
+        var workshops = $("#workshops").val();
+        var reasonToCome = $("#reasonToCome").val();
+        var name = (firstName+"_"+lastName);
+        var personalRef =  new Firebase("https://chehacksregis.firebaseio.com/peopleRegistered/"+name+"/");
+        personalRef.update({
+            "email":email,
+            "phoneNumber":number,
+            "zipCode":zip,
+            "school":school,
+            "dietaryRestrictions":dietRestrict,
+            "grade":grade,
+            "tShirtSize":teeSize,
+            "firstHackathon":firstHackathon,
+            "gender":gender,
+            "workshopRequests":workshops,
+            "reasonToCome":reasonToCome
+        });
+        document.location = "https://google.com"
+    } else {
+        $("#required").after(inputEmpty);
+        $('html, body').animate({
+            scrollTop: $("#warning").offset().top
+        }, 1000);
+    }
 }

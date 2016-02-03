@@ -11,6 +11,9 @@
 body{
    /* background-image: url("back.png");*/
 }
+img{
+    width:50%;
+}
 .info {
     font-family: 'opensans';
     font-size: 16px;
