@@ -90,7 +90,7 @@ function updateFirebase(){
             "workshopRequests":workshops,
             "reasonToCome":reasonToCome
         });
-        document.location = "https://google.com"
+        document.location = "thanks.html"
     } else {
         $("#required").after(inputEmpty);
         $('html, body').animate({

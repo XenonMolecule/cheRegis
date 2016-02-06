@@ -1,0 +1,30 @@
+a {text-decoration: none;}
+@font-face {
+    font-family: 'opensans'; /*a name to be used later*/
+    src: url('OpenSans-Regular.ttf') format('truetype');/*URL to font*/
+}
+body {
+  font-family: 'opensans';
+  text-align: center;
+  animation: colorchange 20s; /* animation-name followed by duration in seconds*/
+         /* you could also use milliseconds (ms) or something like 2.5s */
+      -webkit-animation: colorchange 20s; /* Chrome and Safari */
+}
+
+@keyframes colorchange
+    {
+      0%   {background: red;}
+      25%  {background: yellow;}
+      50%  {background: blue;}
+      75%  {background: green;}
+      100% {background: red;}
+    }
+
+    @-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+    {
+      0%   {background: red;}
+      25%  {background: yellow;}
+      50%  {background: blue;}
+      75%  {background: green;}
+      100% {background: red;}
+    }
