@@ -2,11 +2,11 @@
  a {text-decoration: none;}
 @font-face {
     font-family: 'beb'; /*a name to be used later*/
-    src: url('BebasNeue.otf') format('opentype'); /*URL to font*/
+    src: url('resources/BebasNeue.otf') format('opentype'); /*URL to font*/
 }
 @font-face {
     font-family: 'opensans'; /*a name to be used later*/
-    src: url('OpenSans-Regular.ttf') format('truetype');/*URL to font*/
+    src: url('resources/OpenSans-Regular.ttf') format('truetype');/*URL to font*/
 }
 
 .info {
