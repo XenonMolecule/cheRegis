@@ -88,7 +88,8 @@ function updateFirebase(){
             "firstHackathon":firstHackathon,
             "gender":gender,
             "workshopRequests":workshops,
-            "reasonToCome":reasonToCome
+            "reasonToCome":reasonToCome,
+            "dateRegistered": new Date()
         });
         document.location = "tabs/thanks/thanks.html"
     } else {
