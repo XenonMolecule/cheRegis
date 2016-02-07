@@ -1,7 +1,7 @@
 a {text-decoration: none;}
 @font-face {
     font-family: 'opensans'; /*a name to be used later*/
-    src: url('resources/OpenSans-Regular.ttf') format('truetype');/*URL to font*/
+    src: url('../../resources/OpenSans-Regular.ttf') format('truetype');/*URL to font*/
 }
 body {
   font-family: 'opensans';
