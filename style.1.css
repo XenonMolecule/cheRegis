@@ -11,18 +11,28 @@
 body{
    /* background-image: url("back.png");*/
 }
+.file{
+    margin-left: 44%;
+    margin-top:0px;
+    margin-bottom:0px;
+}
 img{
     width:50%;
+    margin-right:auto;
+    margin-left:auto ;
 }
 .info {
     font-family: 'opensans';
     font-size: 16px;
     display: block;
-    float: left;
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 .info input{
     font-family: 'Ariel';
+    text-align: center;
 }
 
 .info textarea{
@@ -35,6 +45,7 @@ img{
 .head {
     font-family:'beb';
     font-size:50px;
+    text-align: center;
 }
 
 .unselected{

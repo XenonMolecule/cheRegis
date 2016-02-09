@@ -4,12 +4,8 @@ var myFirebaseRef = new Firebase("https://chehacksregis.firebaseio.com/");
 var requiredTextIDs = ["#first","#last","#email","#number","#zip","#school"];
 var requiredSelectorIDs = ["#grade","#teeSize","#firstHackathon"];
 var inputEmpty = $("<h5><font color='red' id='warning'>&nbsp&nbspSome Required Fields Are Empty</font></h5>");
-
-function uploadFile() {
-    var x = document.createElement("INPUT");
-    x.setAttribute("type", "file");
-    document.body.appendChild(x);
-}
+var file = new FileReader();
+var fileData;
 
 $("#submit").on("click",function(){
     updateFirebase();
@@ -89,7 +85,8 @@ function updateFirebase(){
             "gender":gender,
             "workshopRequests":workshops,
             "reasonToCome":reasonToCome,
-            "dateRegistered": new Date()
+            "dateRegistered": new Date(),
+            "resume":fileData
         });
         document.location = "tabs/thanks/thanks.html"
     } else {
@@ -99,3 +96,17 @@ function updateFirebase(){
         }, 1000);
     }
 }
+
+file.onload = (function(event){
+    fileData = file.result;
+    console.log("loaded");
+});
+
+$("#optionalResume").on("change", function (){
+    var input = document.getElementById('optionalResume');
+    if(input.files[0]){
+        console.log("successful upload");
+        file.readAsDataURL(input.files[0]);
+    }
+    console.log("new file");
+});
